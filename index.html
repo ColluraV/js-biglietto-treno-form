@@ -51,29 +51,88 @@
       </div>
     
 
+<div class="container">
 
-          <div class="col d-flex justify-content-center">
-            <div class="biglietto card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3  text-center">
-                <h3 class="my-0 fw-Bolder fs-2 text-center"> Il Tuo Biglietto</h3> <!-- prezxzo pieno/ ridotto-->
-              </div>
-              <div class="card-header">
-                <h4 id="fasciaPrezzo" class="my-0 fw-normal bg-gradient bg-primary text-center "></h4> <!-- prezxzo pieno/ ridotto-->
-              </div>
-              <div class="card-body d-flex flex-column">
-               <div class="d-flex justify-content-center"><h1 id="prezzo" class="card-title pricing-card-title d-inline-block"></h1><h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light d-inline-block">€</small></h1></div> 
-                <ul id="datiBiglietto" class="list-unstyled mt-3 mb-4">
-                  <li>Biglietto numero <span id="numBiglietto"></span> </li>
-                  <li>Nome <span id="firstName" ></span> </li>
-                  <li>Cognome <span id="secondName" ></span> </li>
-                  <li >Data <span id="data" ></span></li>
-                </ul>
-                <button type="button" class="btn btn-success">Compra Ora</button>
-              </div>
-            </div>
-          </div>
-        </div>
+
+  <div  id="form" class="row p-4 m-5 border border-secondary shadow-lg bg-secondary bg-opacity-9">      <!--form da compilare-->
+
+
+
+    <div class="col-sm-6">
+      <label for="firstName" class="form-label">First name</label>
+      <input type="text" class="form-control" id="firstName" name="nomeInput" placeholder="" value="" required="">
+      <div class="invalid-feedback">
+        Per favore inserisci il nome.
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <label for="lastName" class="form-label">Cognome</label>
+      <input type="text" class="form-control" id="lastName" name="cognomeInput" placeholder="" value="" required="">
+      <div class="invalid-feedback">
+        Per favore inserisci il cognome.
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-4 mx-auto my-3">
+      <label for="tratta" class="form-label">Lunghezza tratta</label>
+      <input type="text" class="form-control" id="tratta" name="trattaInput" placeholder="Esprimere distanza in km" required="">
+      <div class="invalid-feedback">
+        Si prega di inserire la lunghezza della tratta.
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-4 mx-auto my-3">
+      <label for="eta" class="form-label">Inserisci la tua età</label>
+      <input type="text" class="form-control" id="eta" name="etaInput" placeholder="" required="">
+      <div class="invalid-feedback">
+        Si prega di inserire un'età.
+      </div>
+    </div>
+
+
+                                              <!-- tasto conferma-->
+
+    <div class="d-flex gap-2 justify-content-center py-3">
+      <button class="btn btn-primary d-inline-flex align-items-center confermaForm" type="button">
+        Conferma Dati
+        <svg class="bi ms-1" width="20" height="20"><use xlink:href="#arrow-right-short"></use></svg>
+      </button>
+    </div>
     
+  </div>
+
+                            <!--         BIGLIETTO            -->
+
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <div class="biglietto card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3  text-center">
+          <h3 class="my-0 fw-Bolder fs-2 text-center"> Il Tuo Biglietto</h3> <!-- prezxzo pieno/ ridotto-->
+        </div>
+        <div class="card-header">
+          <h4 id="fasciaPrezzo" class="my-0 fw-normal bg-gradient bg-primary text-center "></h4> <!-- prezxzo pieno/ ridotto-->
+        </div>
+        <div class="card-body d-flex flex-column">
+         <div class="d-flex justify-content-center"><h1 id="prezzo" class="card-title pricing-card-title d-inline-block"></h1><h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light d-inline-block">€</small></h1></div> 
+          <ul id="datiBiglietto" class="list-unstyled mt-3 mb-5">
+            <li>Biglietto numero <span id="numBiglietto"></span> </li>
+            <li>Nome <span id="Nome" ></span> </li>
+            <li>Cognome <span id="secondName" ></span> </li>
+            <li >Data <span id="data" ></span></li>
+            <li >Lung.Tratta<span id="distanza" ></span></li>
+
+
+          </ul>
+          <button type="button" class="btn btn-success">Compra Ora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+        
         <h2 class="display-6 text-center mb-4">Sconti Biglietto</h2>
     
         <div class="table-responsive d-flex justify-content-center" >
@@ -99,13 +158,10 @@
             
           </table>
         </div>
-      
-    
-    
-    <span id="prezzo"></span>
 
-    <span id="distanza"></span>
-    <span id="data"></span>
+
+    
+
 
     
     
